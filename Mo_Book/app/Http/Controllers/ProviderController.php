@@ -78,4 +78,9 @@ class ProviderController extends Controller
         }
 
     }
+
+    function onLogout(Request $request){
+        $request->session()->flush();
+        return redirect('provider/login');
+    }
 }

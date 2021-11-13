@@ -17,11 +17,11 @@ Route::group(['prefix' => 'provider'], function () {
     Route::post('login',[ProviderController::class,'LogIn'])->name('provider.login');
     Route::get('register',[ProviderController::class,'RegisterView']);
     Route::post('register',[ProviderController::class,'Registration'])->name('provider.register');
-//    Route::get('updatepassword',[AdminController::class,'updatepassword']);
+    Route::get('logout',[ProviderController::class,'onLogout']);
 });
 
 //Admin Routes
-Route::group(['prefix' => 'provider'], function () {
+Route::group(['prefix' => 'provider','middleware' => 'provider_auth'], function () {
     Route::get('dashboard', [ProviderController::class, 'DashboardView']);
 });
 
