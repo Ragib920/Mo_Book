@@ -4,8 +4,8 @@
 
     <!-- Image Logo -->
     <a class="mt-4 mb-4" style="text-decoration: none;font-size:26px; color:#14BF98 " href="{{ '/' }}"><i class="fab fa-meetup"></i> M o   B o o k</a>
-    
-    
+
+
 
     <!-- Mobile Menu Toggle Button -->
 
@@ -30,10 +30,6 @@
                 <a class="nav-link page-scroll" href="#callMe">SIGN IN</a>
             </li>
 
-
-          
-       
-     
-        </span>
+        </ul>
     </div>
 </nav> <!-- end of navbar -->

@@ -1,17 +1,27 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProviderController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/',[FrontController::class,'indexView']);
+
+//===================================
+//provider
+//===================================
+
+//Admin Authentication
+Route::group(['prefix' => 'provider'], function () {
+    Route::get('login',[ProviderController::class,'LoginView']);
+    Route::post('login',[ProviderController::class,'LogIn'])->name('provider.login');
+    Route::get('register',[ProviderController::class,'RegisterView']);
+    Route::post('register',[ProviderController::class,'Registration'])->name('provider.register');
+//    Route::get('updatepassword',[AdminController::class,'updatepassword']);
+});
+
+//Admin Routes
+Route::group(['prefix' => 'provider'], function () {
+    Route::get('dashboard', [ProviderController::class, 'DashboardView']);
+});
+
