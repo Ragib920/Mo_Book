@@ -14,7 +14,7 @@
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="content">
-                                <a class="js-acc-btn" href="#">Admin Name</a>
+                                <a class="js-acc-btn"  style="text-decoration: none;font-size:18px; color:#14BF98 " href="#"><i class="fas fa-user-circle"></i> {{ session()->get('PROVIDER_NAME') }}</a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="account-dropdown__body">

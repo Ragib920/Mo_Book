@@ -14,6 +14,21 @@
                         <i class="fas fa-home"></i>Dashboard
                     </a>
                 </li>
+                <li class=" @yield('details_select') ">
+                    <a href="{{url('admin/dashboard')}}">
+                        <i class="far fa-circle"></i>Company Details
+                    </a>
+                </li>
+                <li class=" @yield('details_select') ">
+                    <a href="{{url('admin/dashboard')}}">
+                        <i class="far fa-circle"></i>Category
+                    </a>
+                </li>
+                <li class=" @yield('details_select') ">
+                    <a href="{{url('admin/dashboard')}}">
+                        <i class="far fa-circle"></i> Service
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

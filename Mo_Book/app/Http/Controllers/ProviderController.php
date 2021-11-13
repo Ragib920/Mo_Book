@@ -64,6 +64,7 @@ class ProviderController extends Controller
             if (Hash::check($request->post('password'),$result->password)){
                 $request->session()->put('PROVIDER_LOGIN',true);
                 $request->session()->put('PROVIDER_ID',$result->id);
+                $request->session()->put('PROVIDER_NAME',$result->name);
                 return redirect('provider/dashboard');
             }
             else{
