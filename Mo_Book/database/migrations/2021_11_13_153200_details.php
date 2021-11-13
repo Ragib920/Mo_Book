@@ -13,7 +13,17 @@ class Details extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('details', function (Blueprint $table) {
+            $table->id();
+            $table->string("company_name");
+            $table->string("phone");
+            $table->longText("address");
+            $table->string("short_des");
+            $table->string("image");
+            $table->integer("provider_id");
+            $table->integer("status");
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class Details extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('details');
     }
 }

@@ -10,21 +10,21 @@
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
                 <li class=" @yield('dashboard_select') ">
-                    <a href="{{url('admin/dashboard')}}">
+                    <a href="{{url('provider/dashboard')}}">
                         <i class="fas fa-home"></i>Dashboard
                     </a>
                 </li>
                 <li class=" @yield('details_select') ">
-                    <a href="{{url('admin/dashboard')}}">
+                    <a href="{{url('provider/details')}}">
                         <i class="far fa-circle"></i>Company Details
                     </a>
                 </li>
-                <li class=" @yield('details_select') ">
+                <li class=" @yield('category_select') ">
                     <a href="{{url('admin/dashboard')}}">
                         <i class="far fa-circle"></i>Category
                     </a>
                 </li>
-                <li class=" @yield('details_select') ">
+                <li class=" @yield('service_select') ">
                     <a href="{{url('admin/dashboard')}}">
                         <i class="far fa-circle"></i> Service
                     </a>
