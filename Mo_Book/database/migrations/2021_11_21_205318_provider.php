@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Details extends Migration
+class Provider extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class Details extends Migration
      */
     public function up()
     {
-        Schema::create('details', function (Blueprint $table) {
+        Schema::create('providers', function (Blueprint $table) {
             $table->id();
-            $table->string("company_name");
-            $table->string("phone");
-            $table->longText("address");
-            $table->longtext("short_des");
-            $table->string("image");
-            $table->integer("provider_id");
-            $table->integer("status");
+            $table->string('name');
+            $table->string('email');
+            $table->string('password');
+            $table->integer('status');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ class Details extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('details');
+        Schema::dropIfExists('providers');
     }
 }

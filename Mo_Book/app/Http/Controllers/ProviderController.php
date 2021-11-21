@@ -28,7 +28,7 @@ class ProviderController extends Controller
 
         $rules=[
             'name'=>'required',
-            'email'=>'required|unique:provider,email,'.$request->post('id'),
+            'email'=>'required|unique:providers,email,'.$request->post('id'),
             'password'=>'required|min:8|string',
         ];
         $custom_message=[
