@@ -28,7 +28,7 @@
 
                                 <p>
                                     Do not have account?
-                                    <a href="#">Register here</a>
+                                    <a href="{{url('provider/register')}}">Register here</a>
                                 </p>
                                 @if(Session::has('error'))
                                     <div class="alert alert-danger text-center pt-3" role="alert">

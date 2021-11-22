@@ -57,7 +57,7 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    
+
                     <!-- Card -->
                     <div class="card">
                         <span class="fa-stack">
@@ -102,7 +102,7 @@
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
     <!-- end of description -->
-   
+
     <!-- Projects -->
 	<div id="projects" class="filter">
 		<div class="container">
@@ -112,7 +112,7 @@
                     <h2>Projects That We're Proud Of</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-   
+
 
              <div class="row">
                 <div class="col-lg-12">
@@ -135,7 +135,7 @@
                             <div id="services" class="cards-2 bg-white">
                                 <div class="row">
                                     <div class="col-lg-12">
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -161,7 +161,7 @@
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -187,7 +187,7 @@
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -216,14 +216,14 @@
                                     </div> <!-- end of col -->
                                 </div> <!-- end of row -->
                             </div> <!-- end of cards-2 -->
-                            <!-- end of services -->              
+                            <!-- end of services -->
                         </div>
                         {{-- Profile  --}}
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div id="services" class="cards-2 bg-white">
                                 <div class="row">
                                     <div class="col-lg-12">
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -249,7 +249,7 @@
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -275,7 +275,7 @@
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -311,7 +311,7 @@
                             <div id="services" class="cards-2 bg-white">
                                 <div class="row">
                                     <div class="col-lg-12">
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -337,7 +337,7 @@
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -363,7 +363,7 @@
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
-                    
+
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
@@ -423,7 +423,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -446,7 +446,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -469,7 +469,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -492,7 +492,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -515,7 +515,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -538,7 +538,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -561,7 +561,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -584,7 +584,7 @@
                     <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -634,7 +634,7 @@
                         </div>
                         <!-- end of counter -->
 
-                    </div> <!-- end of text-container -->      
+                    </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -698,7 +698,7 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    
+
                     <!-- Contact Form -->
                     <form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
@@ -717,7 +717,7 @@
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Aria's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
+                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Aria's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">

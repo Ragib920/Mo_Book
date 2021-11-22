@@ -49,7 +49,7 @@
                             <div class="register-link">
                                 <p>
                                     Already have account?
-                                    <a href="#">login</a>
+                                    <a href="{{url('provider/login')}}">login</a>
                                 </p>
                             </div>
                         </div>
