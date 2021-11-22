@@ -43,15 +43,15 @@
                             <i class="far fa-circle"></i>Lighting
                             </a>
                         </li>
-                        <li class=" @yield('catering_select') ">
-                            <a href="{{url('provider/details')}}">
+                        <li class=" @yield('sound_system_select') ">
+                            <a href="{{url('provider/sound_system')}}">
                             <i class="far fa-circle"></i>Sound System
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li class=" @yield('details_select') ">
+                <li class=" @yield('order_lisy_select') ">
                     <a href="{{url('provider/details')}}">
                     <i class="fas fa-chevron-circle-right"></i>Order List
                     </a>

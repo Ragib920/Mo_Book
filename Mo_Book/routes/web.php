@@ -4,6 +4,7 @@ use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PhotographyController;
 use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\Sound_systemController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,6 +45,15 @@ Route::group(['prefix' => 'provider','middleware' => 'provider_auth'], function 
     Route::get('photography/manage_photography/{id}',[PhotographyController::class,'ManagePhotographyView']);
     //    update photography status
     Route::get('photography/status/{status}/{id}',[PhotographyController::class,'status']);
+
+    //    ==========Sound_system========
+    Route::get('sound_system',[Sound_systemController::class,'Sound_systemView']);
+    Route::get('sound_system/manage_sound_system',[Sound_systemController::class,'ManageSound_systemView']);
+    Route::post('sound_system/manage_Sound_system_process',[Sound_systemController::class,'ManageSound_systemProcess'])->name('sound_system.ManageSound_systemProcess');
+    Route::get('sound_system/deleteSound_system/{id}',[Sound_systemController::class,'DeleteSound_system']);
+    Route::get('sound_system/manage_sound_system/{id}',[Sound_systemController::class,'ManageSound_systemView']);
+    //    update Sound_system status
+    Route::get('sound_system/status/{status}/{id}',[Sound_systemController::class,'status']);
 
 
 });
