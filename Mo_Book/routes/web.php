@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CateringController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\LightingController;
@@ -61,7 +62,7 @@ Route::group(['prefix' => 'provider','middleware' => 'provider_auth'], function 
     Route::get('decoration',[DecorationController::class,'DecorationView']);
     Route::get('decoration/manage_decoration',[DecorationController::class,'ManageDecorationView']);
     Route::post('decoration/manage_Decoration_process',[DecorationController::class,'ManageDecorationProcess'])->name('decoration.ManageDecorationProcess');
-    Route::get('decoration/deleteDecoration/{id}',[DecorationController::class,'DeleteSound_system']);
+    Route::get('decoration/deleteDecoration/{id}',[DecorationController::class,'DeleteDecoration']);
     Route::get('decoration/manage_decoration/{id}',[DecorationController::class,'ManageDecorationView']);
     //    update Sound_system status
     Route::get('decoration/status/{status}/{id}',[DecorationController::class,'status']);
@@ -70,11 +71,19 @@ Route::group(['prefix' => 'provider','middleware' => 'provider_auth'], function 
     Route::get('lighting',[LightingController::class,'LightingView']);
     Route::get('lighting/manage_lighting',[LightingController::class,'ManageLightingView']);
     Route::post('lighting/manage_Lighting_process',[LightingController::class,'ManageLightingProcess'])->name('lighting.ManageLightingProcess');
-    Route::get('lighting/deleteLighting/{id}',[LightingController::class,'DeleteSound_system']);
+    Route::get('lighting/deleteLighting/{id}',[LightingController::class,'DeleteLighting']);
     Route::get('lighting/manage_lighting/{id}',[LightingController::class,'ManageLightingView']);
     //    update Sound_system status
     Route::get('lighting/status/{status}/{id}',[LightingController::class,'status']);
 
+    //    ==========catering========
+    Route::get('catering',[CateringController::class,'CateringView']);
+    Route::get('catering/manage_catering',[CateringController::class,'ManageCateringView']);
+    Route::post('catering/manage_catering_process',[CateringController::class,'ManageCateringProcess'])->name('catering.ManageCateringProcess');
+    Route::get('catering/deletecatering/{id}',[CateringController::class,'DeleteCatering']);
+    Route::get('catering/manage_catering/{id}',[CateringController::class,'ManageCateringView']);
+    //    update Sound_system status
+    Route::get('catering/status/{status}/{id}',[CateringController::class,'status']);
 
 });
 

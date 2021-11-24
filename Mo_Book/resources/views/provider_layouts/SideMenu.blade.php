@@ -24,7 +24,7 @@
                     </a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li class=" @yield('catering_select') ">
-                            <a href="{{url('provider/details')}}">
+                            <a href="{{url('provider/catering')}}">
                             <i class="far fa-circle"></i>Catering
                             </a>
                         </li>
