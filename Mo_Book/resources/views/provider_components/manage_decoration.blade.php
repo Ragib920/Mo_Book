@@ -1,9 +1,9 @@
 @extends('provider_layouts.app')
 
-@section('title','Photography')
-@section('photography_select','active')
-@section('content')
+@section('title','Decoration')
+@section('decoration_select','active')
 
+@section('content')
     @if($id>0)
         {{$image_required=" "}}
     @else
@@ -20,7 +20,7 @@
                         <div class="card">
                             <div class="card-header"> </div>
                             <div class="card-body">
-                                <form action="{{route('photography.ManagePhotographyProcess')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{route('decoration.ManageDecorationProcess')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <input  name="id" value="{{$id}}" type="hidden"  >
                                     <input  name="provider_id" value="{{session()->get('PROVIDER_ID')}}" type="hidden"  >
@@ -47,7 +47,7 @@
                                         <div class="col-md-2">
                                             <div class="pt-3">
                                                 @if($image!='')
-                                                    <a href="{{asset('storage/media/photography/'.$image)}}" target="_blank"><img width="100px" src="{{asset('storage/media/photography/'.$image)}}"/></a>
+                                                    <a href="{{asset('storage/media/decoration/'.$image)}}" target="_blank"><img width="100px" src="{{asset('storage/media/decoration/'.$image)}}"/></a>
                                                 @endif
                                             </div>
                                         </div>
@@ -84,6 +84,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+
                                     <div>
                                         <button  type="submit" class="btn btn-lg btn-info btn-block">
                                             Submit

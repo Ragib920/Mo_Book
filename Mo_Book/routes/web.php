@@ -5,6 +5,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PhotographyController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\Sound_systemController;
+use App\Http\Controllers\DecorationController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -54,6 +55,15 @@ Route::group(['prefix' => 'provider','middleware' => 'provider_auth'], function 
     Route::get('sound_system/manage_sound_system/{id}',[Sound_systemController::class,'ManageSound_systemView']);
     //    update Sound_system status
     Route::get('sound_system/status/{status}/{id}',[Sound_systemController::class,'status']);
+
+    //    ==========decoration========
+    Route::get('decoration',[DecorationController::class,'DecorationView']);
+    Route::get('decoration/manage_decoration',[DecorationController::class,'ManageDecorationView']);
+    Route::post('decoration/manage_Decoration_process',[DecorationController::class,'ManageDecorationProcess'])->name('decoration.ManageDecorationProcess');
+    Route::get('decoration/deleteDecoration/{id}',[DecorationController::class,'DeleteSound_system']);
+    Route::get('decoration/manage_decoration/{id}',[DecorationController::class,'ManageDecorationView']);
+    //    update Sound_system status
+    Route::get('decoration/status/{status}/{id}',[DecorationController::class,'status']);
 
 
 });
