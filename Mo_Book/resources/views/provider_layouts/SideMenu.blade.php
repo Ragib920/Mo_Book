@@ -38,8 +38,8 @@
                             <i class="far fa-circle"></i>Decoration
                             </a>
                         </li>
-                        <li class=" @yield('catering_select') ">
-                            <a href="{{url('provider/details')}}">
+                        <li class=" @yield('lighting_select') ">
+                            <a href="{{url('provider/lighting')}}">
                             <i class="far fa-circle"></i>Lighting
                             </a>
                         </li>
