@@ -19,7 +19,7 @@ class Details extends Migration
             $table->string("phone");
             $table->longText("address");
             $table->longtext("short_des");
-            $table->string("image");
+            $table->string("company_image");
             $table->integer("provider_id");
             $table->integer("status");
             $table->timestamps();

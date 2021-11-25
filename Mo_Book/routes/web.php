@@ -10,8 +10,13 @@ use App\Http\Controllers\Sound_systemController;
 use App\Http\Controllers\DecorationController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/',[FrontController::class,'indexView']);
+
+Route::get('/allcatering',[FrontController::class,'AllCateringView']);
+Route::get('/allphotography',[FrontController::class,'AllPhotographyView']);
+Route::get('/alldecoration',[FrontController::class,'AllDecorationView']);
+Route::get('/alllighting',[FrontController::class,'AllLightingView']);
+Route::get('/allsoundsystem',[FrontController::class,'AllSoundSystemView']);
 
 //===================================
 //provider

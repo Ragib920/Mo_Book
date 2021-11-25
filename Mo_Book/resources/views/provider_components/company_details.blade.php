@@ -38,8 +38,8 @@
                                 @foreach($result as $data)
                                     <tr>
                                         <td>
-                                            @if($data->image!='')
-                                                <img width="100px" src="{{asset('storage//media/details/'.$data->image)}}"/>
+                                            @if($data->company_image!='')
+                                                <img width="100px" src="{{asset('storage//media/details/'.$data->company_image)}}"/>
                                             @endif
                                         </td>
                                         <td>{{ $data->company_name }}</td>

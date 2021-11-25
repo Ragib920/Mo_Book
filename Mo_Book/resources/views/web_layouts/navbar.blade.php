@@ -15,11 +15,31 @@
     </button>
     <!-- end of mobile menu toggle button -->
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <li class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="{{ '/' }}">HOME <span class="sr-only">(current)</span></a>
             </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{'/allcatering'}}"><span class="item-text">CATERING</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="{{'/allphotography'}}"><span class="item-text">PHOTOGRAPHY</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="{{'/alldecoration'}}"><span class="item-text">DECORATION</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="{{'/alllighting'}}"><span class="item-text">LIGHTING</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="{{'/allsoundsystem'}}"><span class="item-text">SOUND SYSTEM</span></a>
+                </div>
+            </li>
+            <!-- end of dropdown menu -->
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="{{ '/' }}">COMPANIES <span class="sr-only">(current)</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="#callMe"> | </a>
             </li>

@@ -25,7 +25,7 @@ class DetailsController extends Controller
             $result['phone']=$arr['0']->phone;
             $result['address']=$arr['0']->address;
             $result['short_des']=$arr['0']->short_des;
-            $result['image']=$arr['0']->image;
+            $result['company_image']=$arr['0']->company_image;
             $result['id']=$arr['0']->id;
 
             $result['details']=DB::table('details')->where(['status'=>1])->where('id','!=',$id)->get();
@@ -35,7 +35,7 @@ class DetailsController extends Controller
             $result['phone']='';
             $result['address']='';
             $result['short_des']='';
-            $result['image']="";
+            $result['company_image']="";
             $result['id']=0;
 
             $result['details']=DB::table('details')->where(['status'=>1])->get();
@@ -55,10 +55,10 @@ class DetailsController extends Controller
         }
 
         $rules = [
-            'image' => $image_validation,
+            'company_image' => $image_validation,
         ];
         $custom_message = [
-            'image.mimes' => 'Image must be on jpeg,png,jpg,gif format',
+            'company_image.mimes' => 'Image must be on jpeg,png,jpg,gif format',
         ];
         $this->validate($request, $rules, $custom_message);
 
@@ -72,20 +72,20 @@ class DetailsController extends Controller
             $msg = " Details Added Successfully ";
         }
 
-        if ($request->hasfile('image')) {
+        if ($request->hasfile('company_image')) {
 
             if ($request->post('id') > 0) {
                 $arrImage = DB::table('details')->where(['id' => $request->post('id')])->get();
-                if (Storage::exists('/public/media/details/' . $arrImage[0]->image)) {
-                    Storage::delete('/public/media/details/' . $arrImage[0]->image);
+                if (Storage::exists('/public/media/details/' . $arrImage[0]->company_image)) {
+                    Storage::delete('/public/media/details/' . $arrImage[0]->company_image);
                 }
             }
 
-            $image = $request->file('image');
-            $ext = $image->extension();
+            $company_image = $request->file('company_image');
+            $ext = $company_image->extension();
             $image_name = time() . '.' . $ext;
-            $image->storeAs('/public/media/details', $image_name);
-            $model->image = $image_name;
+            $company_image->storeAs('/public/media/details', $image_name);
+            $model->company_image = $image_name;
         }
 
 
@@ -103,8 +103,8 @@ class DetailsController extends Controller
     public function DeleteDetails($id)
     {
         $arrImage = DB::table('details')->where(['id' => $id])->get();
-        if (Storage::exists('/public/media/details/' . $arrImage[0]->image)) {
-            Storage::delete('/public/media/details/' . $arrImage[0]->image);
+        if (Storage::exists('/public/media/details/' . $arrImage[0]->company_image)) {
+            Storage::delete('/public/media/details/' . $arrImage[0]->company_image);
         }
         DetailsModel::where('id', $id)->delete();
         return back()->with('message', 'Details Deleted Successfully');

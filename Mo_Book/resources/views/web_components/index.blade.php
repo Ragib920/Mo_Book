@@ -37,7 +37,7 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="web_frontend/images/intro-office.jpg" alt="alternative">
+                        <img class="img-fluid" style="height: 410px;width: 635px;"  src="web_frontend/images/intro-office.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -45,73 +45,9 @@
     </div> <!-- end of basic-1 -->
     <!-- end of intro -->
 
-
-    <!-- Description -->
-    <div  id="services" class="cards-1">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-12 ">
-                    <div class="section-title text-center">SERVICES</div>
-                    <h2 class="text-center">Choose The Service Package<br> That Suits Your Needs</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card -->
-                    <div class="card">
-                        <span class="fa-stack">
-                            <span class="hexagon"></span>
-                            <i class="fas fa-binoculars fa-stack-1x"></i>
-                        </span>
-                        <div class="card-body">
-                            <h4 class="card-title">Environment Analysis</h4>
-                            <p>The starting point of any success story is knowing your current position in the business environment</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <span class="fa-stack">
-                            <span class="hexagon"></span>
-                            <i class="fas fa-list-alt fa-stack-1x"></i>
-                        </span>
-                        <div class="card-body">
-                            <h4 class="card-title">Development Planning</h4>
-                            <p>After completing the environmental analysis the next stage is to design and  plan your development strategy</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <span class="fa-stack">
-                            <span class="hexagon"></span>
-                            <i class="fas fa-chart-pie fa-stack-1x"></i>
-                        </span>
-                        <div class="card-body">
-                            <h4 class="card-title">Execution & Evaluation</h4>
-                            <p>In this phase you will focus on executing the actions plan and evaluating the results after each marketing campaign</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of description -->
-
     <!-- Projects -->
 	<div id="projects" class="filter">
 		<div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">PROJECTS</div>
-                    <h2>Projects That We're Proud Of</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
 
 
              <div class="row">
@@ -119,99 +55,53 @@
                     <div class="button-group filters-button-group d-flex justify-content-center">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class=" button" style="text-decoration: none" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                                <a class=" button" style="text-decoration: none" id="catering-tab" data-toggle="tab" href="#catering" role="tab" aria-controls="catering" aria-selected="true">Carering</a>
                             </li>
                             <li class="nav-item">
-                                <a class="button" style="text-decoration: none" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                <a class="button" style="text-decoration: none" id="photography-tab" data-toggle="tab" href="#photography" role="tab" aria-controls="photography" aria-selected="false">Photography</a>
                             </li>
                             <li class="nav-item">
-                                <a class="button" style="text-decoration: none" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                                <a class="button" style="text-decoration: none" id="lighting-tab" data-toggle="tab" href="#lighting" role="tab" aria-controls="lighting" aria-selected="false">Lighting</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="button" style="text-decoration: none" id="decoration-tab" data-toggle="tab" href="#decoration" role="tab" aria-controls="decoration" aria-selected="false">Decoration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="button" style="text-decoration: none" id="sound-system-tab" data-toggle="tab" href="#sound-system" role="tab" aria-controls="sound-system" aria-selected="false">Sound System</a>
+                            </li>
+
                         </ul>
                     </div>
                     <div class="tab-content" id="myTabContent">
-                        {{-- Home  --}}
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        {{-- catering  --}}
+                        <div class="tab-pane fade show active" id="catering" role="tabpanel" aria-labelledby="catering-tab">
                             <div id="services" class="cards-2 bg-white">
                                 <div class="row">
                                     <div class="col-lg-12">
-
+                                        @foreach($catering as $data)
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-1.jpg" alt="alternative">
+                                                <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/catering/'.$data->image)}}" alt="alternative">
                                             </div>
                                             <div class="card-body">
-                                                <h3 class="card-title">Off The Ground Off The Ground</h3>
-                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>
-                                                <ul class="list-unstyled li-space-lg">
+                                                <h3 class="card-title">{{ $data->package_name }}</h3>
+{{--                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>--}}
+                                                <p class="price">Starting at <span>${{ $data->mrp }}</span> <span><del>${{ $data->price }}</del></span>  </p>
+                                                <ul class="list-unstyled li-space-lg d-flex justify-content-center">
                                                     <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Environment and competition</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Designing the marketing plan</div>
+                                                        <i class="fas fa-store-alt"></i>
+                                                        <div class="media-body" style="font-size: 12px;">{{ $data->company_name }}</div>
                                                     </li>
                                                 </ul>
-                                                <p class="price">Starting at <span>$199</span></p>
                                             </div>
                                             <div class="button-container">
                                                 <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
+                                        @endforeach
 
-                                        <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-2.jpg" alt="alternative">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Accelerated Growth</h3>
-                                                <p>Use this service pack to give your company the necessary impulse to become an industry leader</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Business strategy planning</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Taking the planned actions</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$299</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
-                                        <!-- end of card -->
-
-                                        <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-3.jpg" alt="alternative">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Market Domination</h3>
-                                                <p>You already are a reference point in your industry now you need to learn about acquisitions</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Maintaining the leader status</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Acquisitions the right way</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$299</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
                                         <!-- end of card -->
                                     </div> <!-- end of col -->
                                 </div> <!-- end of row -->
@@ -219,181 +109,154 @@
                             <!-- end of services -->
                         </div>
                         {{-- Profile  --}}
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="tab-pane fade" id="photography" role="tabpanel" aria-labelledby="photography-tab">
                             <div id="services" class="cards-2 bg-white">
                                 <div class="row">
                                     <div class="col-lg-12">
 
+                                    @foreach($photography as $data)
                                         <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-1.jpg" alt="alternative">
+                                            <div class="card">
+                                                <div class="card-image">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/photography/'.$data->image)}}" alt="alternative">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3 class="card-title">{{ $data->package_name }}</h3>
+                                                    {{--                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>--}}
+                                                    <p class="price">Starting at <span>${{ $data->mrp }}</span> <span><del>${{ $data->price }}</del></span>  </p>
+                                                    <ul class="list-unstyled li-space-lg d-flex justify-content-center">
+                                                        <li class="media">
+                                                            <i class="fas fa-store-alt"></i>
+                                                            <div class="media-body" style="font-size: 12px;">{{ $data->company_name }}</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="button-container">
+                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                </div> <!-- end of button-container -->
                                             </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Off The Ground Off The Ground</h3>
-                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Environment and competition</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Designing the marketing plan</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$199</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
-                                        <!-- end of card -->
+                                            <!-- end of card -->
+                                    @endforeach
 
-                                        <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-2.jpg" alt="alternative">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Accelerated Growth</h3>
-                                                <p>Use this service pack to give your company the necessary impulse to become an industry leader</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Business strategy planning</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Taking the planned actions</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$299</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
-                                        <!-- end of card -->
 
-                                        <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-3.jpg" alt="alternative">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Market Domination</h3>
-                                                <p>You already are a reference point in your industry now you need to learn about acquisitions</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Maintaining the leader status</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Acquisitions the right way</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$299</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
                                         <!-- end of card -->
                                     </div> <!-- end of col -->
                                 </div> <!-- end of row -->
                             </div> <!-- end of cards-2 -->
                             <!-- end of services -->
                         </div>
-                        {{-- Contact  --}}
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        {{-- decoration  --}}
+                        <div class="tab-pane fade" id="decoration" role="tabpanel" aria-labelledby="decoration-tab">
                             <div id="services" class="cards-2 bg-white">
                                 <div class="row">
                                     <div class="col-lg-12">
 
+                                    @foreach($decoration as $data)
                                         <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-1.jpg" alt="alternative">
+                                            <div class="card">
+                                                <div class="card-image">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/decoration/'.$data->image)}}" alt="alternative">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3 class="card-title">{{ $data->package_name }}</h3>
+                                                    {{--                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>--}}
+                                                    <p class="price">Starting at <span>${{ $data->mrp }}</span> <span><del>${{ $data->price }}</del></span>  </p>
+                                                    <ul class="list-unstyled li-space-lg d-flex justify-content-center">
+                                                        <li class="media">
+                                                            <i class="fas fa-store-alt"></i>
+                                                            <div class="media-body" style="font-size: 12px;">{{ $data->company_name }}</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="button-container">
+                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                </div> <!-- end of button-container -->
                                             </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Off The Ground Off The Ground</h3>
-                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Environment and competition</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Designing the marketing plan</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$199</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
-                                        <!-- end of card -->
+                                            <!-- end of card -->
+                                    @endforeach
 
-                                        <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-2.jpg" alt="alternative">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Accelerated Growth</h3>
-                                                <p>Use this service pack to give your company the necessary impulse to become an industry leader</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Business strategy planning</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Taking the planned actions</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$299</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
-                                        <!-- end of card -->
 
-                                        <!-- Card -->
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <img class="img-fluid" src="web_frontend/images/services-3.jpg" alt="alternative">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">Market Domination</h3>
-                                                <p>You already are a reference point in your industry now you need to learn about acquisitions</p>
-                                                <ul class="list-unstyled li-space-lg">
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Maintaining the leader status</div>
-                                                    </li>
-                                                    <li class="media">
-                                                        <i class="fas fa-square"></i>
-                                                        <div class="media-body">Acquisitions the right way</div>
-                                                    </li>
-                                                </ul>
-                                                <p class="price">Starting at <span>$299</span></p>
-                                            </div>
-                                            <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                                            </div> <!-- end of button-container -->
-                                        </div>
                                         <!-- end of card -->
                                     </div> <!-- end of col -->
                                 </div> <!-- end of row -->
                             </div> <!-- end of cards-2 -->
                             <!-- end of services -->
                         </div>
+
+                        <div class="tab-pane fade" id="lighting" role="tabpanel" aria-labelledby="lighting-tab">
+                            <div id="services" class="cards-2 bg-white">
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                    @foreach($lighting as $data)
+                                        <!-- Card -->
+                                            <div class="card">
+                                                <div class="card-image">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/lighting/'.$data->image)}}" alt="alternative">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3 class="card-title">{{ $data->package_name }}</h3>
+                                                    {{--                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>--}}
+                                                    <p class="price">Starting at <span>${{ $data->mrp }}</span> <span><del>${{ $data->price }}</del></span>  </p>
+                                                    <ul class="list-unstyled li-space-lg d-flex justify-content-center">
+                                                        <li class="media">
+                                                            <i class="fas fa-store-alt"></i>
+                                                            <div class="media-body" style="font-size: 12px;">{{ $data->company_name }}</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="button-container">
+                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                </div> <!-- end of button-container -->
+                                            </div>
+                                            <!-- end of card -->
+                                    @endforeach
+
+
+                                    <!-- end of card -->
+                                    </div> <!-- end of col -->
+                                </div> <!-- end of row -->
+                            </div> <!-- end of cards-2 -->
+                            <!-- end of services -->
+                        </div>
+
+                        <div class="tab-pane fade" id="sound-system" role="tabpanel" aria-labelledby="sound_system-tab">
+                            <div id="services" class="cards-2 bg-white">
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                    @foreach($sound_system as $data)
+                                        <!-- Card -->
+                                            <div class="card">
+                                                <div class="card-image">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/sound_system/'.$data->image)}}" alt="alternative">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3 class="card-title">{{ $data->package_name }}</h3>
+                                                    {{--                                                <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>--}}
+                                                    <p class="price">Starting at <span>${{ $data->mrp }}</span> <span><del>${{ $data->price }}</del></span>  </p>
+                                                    <ul class="list-unstyled li-space-lg d-flex justify-content-center">
+                                                        <li class="media">
+                                                            <i class="fas fa-store-alt"></i>
+                                                            <div class="media-body" style="font-size: 12px;">{{ $data->company_name }}</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="button-container">
+                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                </div> <!-- end of button-container -->
+                                            </div>
+                                            <!-- end of card -->
+                                    @endforeach
+
+
+                                    <!-- end of card -->
+                                    </div> <!-- end of col -->
+                                </div> <!-- end of row -->
+                            </div> <!-- end of cards-2 -->
+                            <!-- end of services -->
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -404,6 +267,62 @@
     </div> <!-- end of filter -->
     <!-- end of projects -->
 
+ <!-- Description -->
+ <div  id="services"  class="cards-1">
+     <div class="container">
+         <div class="row mb-5">
+             <div class="col-lg-12 ">
+                 <div class="section-title text-center">SERVICES</div>
+                 <h2 class="text-center">Choose The Service Package<br> That Suits Your Needs</h2>
+             </div> <!-- end of col -->
+         </div> <!-- end of row -->
+         <div class="row">
+             <div class="col-lg-12">
+
+                 <!-- Card -->
+                 <div class="card">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-binoculars fa-stack-1x"></i>
+                        </span>
+                     <div class="card-body">
+                         <h4 class="card-title">Environment Analysis</h4>
+                         <p>The starting point of any success story is knowing your current position in the business environment</p>
+                     </div>
+                 </div>
+                 <!-- end of card -->
+
+                 <!-- Card -->
+                 <div class="card">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-list-alt fa-stack-1x"></i>
+                        </span>
+                     <div class="card-body">
+                         <h4 class="card-title">Development Planning</h4>
+                         <p>After completing the environmental aFinalysis the next stage is to design and  plan your development strategy</p>
+                     </div>
+                 </div>
+                 <!-- end of card -->
+
+                 <!-- Card -->
+                 <div class="card">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-chart-pie fa-stack-1x"></i>
+                        </span>
+                     <div class="card-body">
+                         <h4 class="card-title">Execution & Evaluation</h4>
+                         <p>In this phase you will focus on executing the actions plan and evaluating the results after each marketing campaign</p>
+                     </div>
+                 </div>
+                 <!-- end of card -->
+
+             </div> <!-- end of col -->
+         </div> <!-- end of row -->
+     </div> <!-- end of container -->
+ </div> <!-- end of cards-1 -->
+ <!-- end of description -->
 
     <!-- Project Lightboxes -->
     <!-- Lightbox -->
@@ -591,57 +510,6 @@
     <!-- end of lightbox -->
     <!-- end of project lightboxes -->
 
-
-    <!-- About -->
-    <div id="about" class="counter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-xl-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="web_frontend/images/about.jpg" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7 col-xl-6">
-                    <div class="text-container">
-                        <div class="section-title">ABOUT</div>
-                        <h2>We're Passionate About Delivering Growth Services</h2>
-                        <p>Our goal is to provide the right business growth services at the appropriate time so companies can benefit from the created momentum and thrive for a long period of time</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Everything we recommend has direct positive impact</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">You will become an important partner of our company</div>
-                            </li>
-                        </ul>
-
-                        <!-- Counter -->
-                        <div id="counter">
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="231">1</div>
-                                <div class="counter-info">Happy<br>Users</div>
-                            </div>
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="121">1</div>
-                                <div class="counter-info">Issues<br>Solved</div>
-                            </div>
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="159">1</div>
-                                <div class="counter-info">Good<br>Reviews</div>
-                            </div>
-                        </div>
-                        <!-- end of counter -->
-
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of counter -->
-    <!-- end of about -->
-
-
     <!-- Contact -->
     <div id="contact" class="form-2">
         <div class="container">
@@ -714,10 +582,6 @@
                         <div class="form-group">
                             <textarea class="form-control-textarea" id="cmessage" required></textarea>
                             <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Aria's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">

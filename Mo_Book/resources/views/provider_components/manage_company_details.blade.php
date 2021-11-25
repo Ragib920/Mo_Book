@@ -55,14 +55,14 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="image" class="control-label mb-1"> Image</label>
-                                                <input id="image" name="image" type="file" class="form-control" aria-required="true" aria-invalid="false" {{$image_required}} >
-                                                @error('image')
+                                                <input id="company_image" name="company_image" type="file" class="form-control" aria-required="true" aria-invalid="false" {{$image_required}} >
+                                                @error('company_image')
                                                 <span class="text-danger">{{ $message }}</span>
                                                 @enderror
 
 
-                                                @if($image!='')
-                                                    <a href="{{asset('storage/media/details/'.$image)}}" target="_blank"><img width="100px" src="{{asset('storage/media/details/'.$image)}}"/></a>
+                                                @if($company_image!='')
+                                                    <a href="{{asset('storage/media/details/'.$company_image)}}" target="_blank"><img width="100px" src="{{asset('storage/media/details/'.$company_image)}}"/></a>
                                                 @endif
                                             </div>
                                         </div>
