@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\CateringModel;
 use App\Models\DecorationModel;
+use App\Models\DetailsModel;
 use App\Models\LightingModel;
 use App\Models\PhotographyModel;
+use App\Models\ProviderModel;
 use App\Models\Sound_systemModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -87,6 +89,48 @@ class FrontController extends Controller
             ->where(['sound_system.status'=>1])
             ->orderBy('sound_system.id', 'desc')->paginate(21);
         return view('web_components.sound_system',$result);
+    }
+
+    public function AllCompaniesView(Request $request)
+    {
+        $result['providers']=DB::table('providers')
+            ->leftJoin('details','details.provider_id','=','providers.id')
+            ->where(['providers.status'=>1])
+            ->orderBy('providers.id', 'desc')->paginate(20);
+        return view('web_components.companies',$result);
+    }
+
+    public function CompanyDetailsView($id=null)
+    {
+        $result['data']= DetailsModel::find($id);
+        $result['provider']= ProviderModel::find($id);
+        $result['catering']= CateringModel::where(['provider_id'=>$id])
+            ->where(['status'=>1])
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $result['photography']= PhotographyModel::where(['provider_id'=>$id])
+            ->where(['status'=>1])
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $result['lighting']= LightingModel::where(['provider_id'=>$id])
+            ->where(['status'=>1])
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $result['decoration']= DecorationModel::where(['provider_id'=>$id])
+            ->where(['status'=>1])
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $result['sound_system']= Sound_systemModel::where(['provider_id'=>$id])
+            ->where(['status'=>1])
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+
+
+
+
+
+        return view('web_components.company_details',$result);
     }
 
 }

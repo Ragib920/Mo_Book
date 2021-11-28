@@ -46,11 +46,11 @@
                                         <td>{{ $data->phone }}</td>
                                         <td>{{ $data->address }}</td>
                                         <td>
-                                            @if($data->status==1)
-                                                <a href="{{url('provider/details/status/0')}}/{{$data->id}}" class="btn-success btn"> Enabled</a>
-                                            @elseif($data->status==0)
-                                                <a href="{{url('provider/details/status/1')}}/{{$data->id}}" class="btn btn-warning ">Disabled</a>
-                                            @endif
+{{--                                            @if($data->status==1)--}}
+{{--                                                <a href="{{url('provider/details/status/0')}}/{{$data->id}}" class="btn-success btn"> Enabled</a>--}}
+{{--                                            @elseif($data->status==0)--}}
+{{--                                                <a href="{{url('provider/details/status/1')}}/{{$data->id}}" class="btn btn-warning ">Disabled</a>--}}
+{{--                                            @endif--}}
 
                                             <a href="{{url('provider/details/manage_details/')}}/{{$data->id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
                                             <a href="{{url('provider/details/deleteDetails/')}}/{{$data->id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>

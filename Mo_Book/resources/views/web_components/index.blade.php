@@ -1,5 +1,6 @@
 @extends('web_layouts.app')
 @section('title','Mo Book | online event management ')
+@section('home_select','active')
 
 @section('content')
 
@@ -48,8 +49,6 @@
     <!-- Projects -->
 	<div id="projects" class="filter">
 		<div class="container">
-
-
              <div class="row">
                 <div class="col-lg-12">
                     <div class="button-group filters-button-group d-flex justify-content-center">

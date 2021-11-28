@@ -17,6 +17,8 @@ Route::get('/allphotography',[FrontController::class,'AllPhotographyView']);
 Route::get('/alldecoration',[FrontController::class,'AllDecorationView']);
 Route::get('/alllighting',[FrontController::class,'AllLightingView']);
 Route::get('/allsoundsystem',[FrontController::class,'AllSoundSystemView']);
+Route::get('/allcompanies',[FrontController::class,'AllCompaniesView']);
+Route::get('/company_details/{id}',[FrontController::class,'CompanyDetailsView']);
 
 //===================================
 //provider

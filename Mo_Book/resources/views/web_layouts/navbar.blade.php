@@ -3,7 +3,7 @@
     <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
     <!-- Image Logo -->
-    <a class="mt-4 mb-4" style="text-decoration: none;font-size:26px; color:#14BF98 " href="{{ '/' }}"><i class="fab fa-meetup"></i> M o   B o o k</a>
+    <a class="" style="text-decoration: none;font-size:26px; color:#14BF98 " href="{{ '/' }}"><i class="fab fa-meetup"></i> M o   B o o k</a>
 
 
 
@@ -18,7 +18,7 @@
     <li class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="{{ '/' }}">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll @yield('home_select')" href="{{ '/' }}">HOME <span class="sr-only">(current)</span></a>
             </li>
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
@@ -37,7 +37,7 @@
             </li>
             <!-- end of dropdown menu -->
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="{{ '/' }}">COMPANIES <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll @yield('companies_select')" href="{{ '/allcompanies' }}">COMPANIES <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
