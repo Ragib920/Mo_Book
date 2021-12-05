@@ -1,7 +1,7 @@
 @extends('provider_layouts.app')
 
-@section('title','Photography')
-@section('photography_select','active')
+@section('title','Company Details')
+@section('details_select','active')
 
 @section('content')
     <!-- MAIN CONTENT-->
@@ -11,7 +11,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Photography</h2>
+                            <h2 class="title-1">Company Details</h2>
+                            <a  href="{{url('provider/details/manage_details/')}}" class="au-btn au-btn-icon au-btn--blue">
+                                <i class="zmdi zmdi-plus"></i>Add Details</a>
                         </div>
                     </div>
                 </div>
@@ -23,33 +25,29 @@
                             <table class="table table-borderless table-data3">
                                 <thead>
                                 <tr>
-                                    <th>Package Name</th>
                                     <th>Cover Image </th>
-                                    <th>Mrp</th>
-                                    <th>Price</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>phone</th>
+                                    <th>Description</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($result as $data)
                                     <tr>
-                                        <td>{{ $data->package_name }}</td>
                                         <td>
-                                            @if($data->image!='')
-                                                <img width="100px" src="{{asset('storage/media/service/'.$data->image)}}"/>
+                                            @if($data->company_image!='')
+                                                <img width="100px" src="{{asset('storage/media/details/'.$data->company_image)}}"/>
                                             @endif
                                         </td>
-                                        <td>{{ $data->price }}</td>
-                                        <td>{{ $data->mrp }}</td>
-                                        <td>
-                                            @if($data->status==1)
-                                                <a href="{{url('provider/service/status/0')}}/{{$data->id}}" class="btn-success btn"> Enabled</a>
-                                            @elseif($data->status==0)
-                                                <a href="{{url('provider/service/status/1')}}/{{$data->id}}" class="btn btn-warning ">Disabled</a>
-                                            @endif
+                                        <td>{{ $data->company_name }}</td>
+                                        <td>{{ $data->address }}</td>
+                                        <td>{{ $data->phone }}</td>
 
-                                            <a href="{{url('provider/service/manage_service/')}}/{{$data->id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
-                                            <a href="{{url('provider/service/deleteService/')}}/{{$data->id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <td>{!! $data->des !!} </td>
+                                        <td>
+                                            <a href="{{url('provider/details/manage_details/')}}/{{$data->details_id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
                                         </td>
 
                                     </tr>

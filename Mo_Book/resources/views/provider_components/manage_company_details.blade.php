@@ -4,7 +4,7 @@
 @section('details_select','active')
 @section('content')
 
-    @if($id>0)
+    @if($details_id>0)
         {{$image_required=" "}}
     @else
         {{$image_required="required"}}
@@ -22,7 +22,7 @@
                             <div class="card-body">
                                 <form action="{{route('details.ManageDetailsProcess')}}" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <input  name="id" value="{{$id}}" type="hidden"  >
+                                    <input  name="details_id" value="{{$details_id}}" type="hidden"  >
                                     <input  name="provider_id" value="{{session()->get('PROVIDER_ID')}}" type="hidden"  >
                                     <div class="row">
                                         <div class="col-md-6">
@@ -72,7 +72,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="cc-payment" class="control-label mb-1">Short Description</label>
-                                                <textarea name="short_des" id="short_des "  rows="3" class="form-control" required="required" >{{ $short_des }}</textarea>
+                                                <textarea name="short_des" id="short_des "  rows="3" class="form-control" required="required" >{{ $des }}</textarea>
                                             </div>
                                         </div>
                                     </div>

@@ -47,6 +47,9 @@ class Kernel extends HttpKernel
         'provider_auth' => [
             \App\Http\Middleware\ProviderAuth::class,
         ],
+        'user_auth' => [
+            \App\Http\Middleware\UserAuth::class,
+        ],
     ];
 
     /**

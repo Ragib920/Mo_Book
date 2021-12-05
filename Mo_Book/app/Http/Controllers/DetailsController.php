@@ -13,30 +13,29 @@ class DetailsController extends Controller
     {
         $provider_id=$request->session()->get("PROVIDER_ID");
         $result = DetailsModel::where("provider_id",$provider_id)->get();
-        return view('provider_components.company_details', compact('result'));
+        return view('provider_components.details', compact('result'));
     }
-
-    public function ManageDetailsView(Request $request, $id = '')
+    public function ManageDetailsView(Request $request, $details_id = '')
     {
-        if ($id>0){
-            $arr= DetailsModel::where(['id'=>$id])->get();
+        if ($details_id>0){
+            $arr= DetailsModel::where(['details_id'=>$details_id])->get();
 
             $result['company_name']=$arr['0']->company_name;
             $result['phone']=$arr['0']->phone;
             $result['address']=$arr['0']->address;
-            $result['short_des']=$arr['0']->short_des;
+            $result['des']=$arr['0']->des;
             $result['company_image']=$arr['0']->company_image;
-            $result['id']=$arr['0']->id;
+            $result['details_id']=$arr['0']->details_id;
 
-            $result['details']=DB::table('details')->where(['status'=>1])->where('id','!=',$id)->get();
+            $result['details']=DB::table('details')->where(['status'=>1])->where('details_id','!=',$details_id)->get();
         }
         else{
             $result['company_name']='';
             $result['phone']='';
             $result['address']='';
-            $result['short_des']='';
+            $result['des']='';
             $result['company_image']="";
-            $result['id']=0;
+            $result['details_id']=0;
 
             $result['details']=DB::table('details')->where(['status'=>1])->get();
         }
@@ -46,7 +45,7 @@ class DetailsController extends Controller
     public function ManageDetailsProcess(Request $request)
     {
         //for image validation
-        if ( $request->post('id')>0) {
+        if ( $request->post('details_id')>0) {
 
             $image_validation = "mimes:jpeg,png,jpg,gif|max:2048";
         }
@@ -63,9 +62,9 @@ class DetailsController extends Controller
         $this->validate($request, $rules, $custom_message);
 
 
-        if ($request->post('id') > 0) {
+        if ($request->post('details_id') > 0) {
 
-            $model = DetailsModel::find($request->post('id'));
+            $model = DetailsModel::find($request->post('details_id'));
             $msg = " Details Updated Successfully ";
         } else {
             $model = new DetailsModel();
@@ -74,8 +73,8 @@ class DetailsController extends Controller
 
         if ($request->hasfile('company_image')) {
 
-            if ($request->post('id') > 0) {
-                $arrImage = DB::table('details')->where(['id' => $request->post('id')])->get();
+            if ($request->post('details_id') > 0) {
+                $arrImage = DB::table('details')->where(['details_id' => $request->post('details_id')])->get();
                 if (Storage::exists('/public/media/details/' . $arrImage[0]->company_image)) {
                     Storage::delete('/public/media/details/' . $arrImage[0]->company_image);
                 }
@@ -92,29 +91,12 @@ class DetailsController extends Controller
         $model->company_name = $request->post('company_name');
         $model->phone = $request->post('phone');
         $model->address = $request->post('address');
-        $model->short_des = $request->post('short_des');
+        $model->des = $request->post('short_des');
         $model->provider_id= $request->post('provider_id');
-
         $model->status = 1;
         $model->save();
         return redirect('provider/details')->with('message', $msg);
     }
 
-    public function DeleteDetails($id)
-    {
-        $arrImage = DB::table('details')->where(['id' => $id])->get();
-        if (Storage::exists('/public/media/details/' . $arrImage[0]->company_image)) {
-            Storage::delete('/public/media/details/' . $arrImage[0]->company_image);
-        }
-        DetailsModel::where('id', $id)->delete();
-        return back()->with('message', 'Details Deleted Successfully');
-    }
 
-    public function status($status, $id)
-    {
-        $model = DetailsModel::Find($id);
-        $model->status = $status;
-        $model->save();
-        return back()->with('message', ' Details status updated Successfully');
-    }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
     <meta name="author" content="Inovatik">
@@ -19,7 +19,7 @@
 
     <!-- Website Title -->
     <title>@yield('title')</title>
-    
+
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
@@ -28,22 +28,22 @@
     <link href="{{ asset('web_frontend/css/swiper.css') }}" rel="stylesheet">
 	<link href="{{ asset('web_frontend/css/magnific-popup.css') }}" rel="stylesheet">
 	<link href="{{ asset('web_frontend/css/styles.css') }}" rel="stylesheet">
-	
+
 	<!-- Favicon  -->
     <link rel="icon" href="{{ asset('web_frontend/images/favicon.png') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
+
 
     <!-- Navbar -->
     @include('web_layouts.navbar')
     <!-- end of navbar -->
 
-    <!-- footer --> 
+    <!-- footer -->
     @yield('content')
     <!-- end of navbar -->
 
-   
+
 
     <!-- footer -->
     @include('web_layouts.footer')

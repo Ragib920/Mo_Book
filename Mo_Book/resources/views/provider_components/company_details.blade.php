@@ -52,8 +52,8 @@
 {{--                                                <a href="{{url('provider/details/status/1')}}/{{$data->id}}" class="btn btn-warning ">Disabled</a>--}}
 {{--                                            @endif--}}
 
-                                            <a href="{{url('provider/details/manage_details/')}}/{{$data->id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
-                                            <a href="{{url('provider/details/deleteDetails/')}}/{{$data->id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="{{url('provider/details/manage_details')}}/{{$data->details_id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
+                                            <a href="{{url('provider/details/deleteDetails')}}/{{$data->details_id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
 
                                     </tr>

@@ -12,8 +12,6 @@
                     <div class="col-md-12">
                         <div class="overview-wrap">
                             <h2 class="title-1">Catering</h2>
-                            <a  href="{{url('provider/catering/manage_catering')}}" class="au-btn au-btn-icon au-btn--blue">
-                                <i class="zmdi zmdi-plus"></i>Add More</a>
                         </div>
                     </div>
                 </div>
@@ -27,8 +25,8 @@
                                 <tr>
                                     <th>Package Name</th>
                                     <th>Cover Image </th>
-                                    <th>Mrp</th>
                                     <th>Price</th>
+                                    <th>Mrp</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -38,20 +36,20 @@
                                         <td>{{ $data->package_name }}</td>
                                         <td>
                                             @if($data->image!='')
-                                                <img width="100px" src="{{asset('storage/media/catering/'.$data->image)}}"/>
+                                                <img width="100px" src="{{asset('storage/media/service/'.$data->image)}}"/>
                                             @endif
                                         </td>
                                         <td>{{ $data->price }}</td>
                                         <td>{{ $data->mrp }}</td>
                                         <td>
                                             @if($data->status==1)
-                                                <a href="{{url('provider/catering/status/0')}}/{{$data->id}}" class="btn-success btn"> Enabled</a>
+                                                <a href="{{url('provider/service/status/0')}}/{{$data->id}}" class="btn-success btn"> Enabled</a>
                                             @elseif($data->status==0)
-                                                <a href="{{url('provider/catering/status/1')}}/{{$data->id}}" class="btn btn-warning ">Disabled</a>
+                                                <a href="{{url('provider/service/status/1')}}/{{$data->id}}" class="btn btn-warning ">Disabled</a>
                                             @endif
 
-                                            <a href="{{url('provider/catering/manage_catering/')}}/{{$data->id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
-                                            <a href="{{url('provider/catering/deleteCatering/')}}/{{$data->id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="{{url('provider/service/manage_service/')}}/{{$data->id}}" class="btn btn-info"> <i class="fas fa-edit"></i></a>
+                                            <a href="{{url('provider/service/deleteService/')}}/{{$data->id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
 
                                     </tr>

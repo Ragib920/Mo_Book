@@ -14,6 +14,11 @@
                         <i class="fas fa-home"></i>Dashboard
                     </a>
                 </li>
+                <li class=" @yield('service_select') ">
+                    <a href="{{url('provider/service/manage_service')}}">
+                        <i class="fas fa-chevron-circle-right"></i>Add Services
+                    </a>
+                </li>
 
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
@@ -24,35 +29,35 @@
                     </a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li class=" @yield('catering_select') ">
-                            <a href="{{url('provider/catering')}}">
+                            <a href="{{url('provider/service/catering')}}">
                             <i class="far fa-circle"></i>Catering
                             </a>
                         </li>
                         <li class=" @yield('photography_select') ">
-                            <a href="{{url('provider/photography')}}">
+                            <a href="{{url('provider/service/photography')}}">
                             <i class="far fa-circle"></i>Photography
                             </a>
                         </li>
                         <li class=" @yield('decoration_select') ">
-                            <a href="{{url('provider/decoration')}}">
+                            <a href="{{url('provider/service/decoration')}}">
                             <i class="far fa-circle"></i>Decoration
                             </a>
                         </li>
                         <li class=" @yield('lighting_select') ">
-                            <a href="{{url('provider/lighting')}}">
+                            <a href="{{url('provider/service/lighting')}}">
                             <i class="far fa-circle"></i>Lighting
                             </a>
                         </li>
                         <li class=" @yield('sound_system_select') ">
-                            <a href="{{url('provider/sound_system')}}">
+                            <a href="{{url('provider/service/sound_system')}}">
                             <i class="far fa-circle"></i>Sound System
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li class=" @yield('order_lisy_select') ">
-                    <a href="{{url('provider/details')}}">
+                <li class=" @yield('order_select') ">
+                    <a href="{{url('provider/orderlist')}}">
                     <i class="fas fa-chevron-circle-right"></i>Order List
                     </a>
                 </li>

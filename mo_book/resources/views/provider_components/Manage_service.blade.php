@@ -1,9 +1,9 @@
 @extends('provider_layouts.app')
 
-@section('title','Catering')
-@section('catering_select','active')
-
+@section('title','Services')
+@section('service_select','active')
 @section('content')
+
     @if($id>0)
         {{$image_required=" "}}
     @else
@@ -20,7 +20,7 @@
                         <div class="card">
                             <div class="card-header"> </div>
                             <div class="card-body">
-                                <form action="{{route('catering.ManageCateringProcess')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{route('service.ManageServiceProcess')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <input  name="id" value="{{$id}}" type="hidden"  >
                                     <input  name="provider_id" value="{{session()->get('PROVIDER_ID')}}" type="hidden"  >
@@ -29,8 +29,19 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label for="cc-payment" class="control-label mb-1">Package Name</label>
-                                                        <input  name="package_name" value="{{$package_name}}" type="text" class="form-control" aria-required="true" aria-invalid="false" required >
+                                                        <label for="cc-payment" class="control-label mb-1">Service Name</label>
+                                                        </select>
+                                                        <select name="service_name" class="form-control" aria-label="Default select example" required="required">
+                                                            <option value="">Select</option>
+                                                            @foreach ($category as $list)
+{{--                                                                @if($list=$id)--}}
+                                                                    <option  value="{{$list}}">{{$list}}</option>
+{{--                                                                @else--}}
+{{--                                                                    <option value="{{$list}}">{{$list}}</option>--}}
+{{--                                                                @endif--}}
+                                                            @endforeach
+                                                        </select>
+{{--                                                        <input   value="{{$service_name}}" type="text" class="form-control" aria-required="true" aria-invalid="false" required >--}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -47,7 +58,7 @@
                                         <div class="col-md-2">
                                             <div class="pt-3">
                                                 @if($image!='')
-                                                    <a href="{{asset('storage/media/catering/'.$image)}}" target="_blank"><img width="100px" src="{{asset('storage/media/catering/'.$image)}}"/></a>
+                                                    <a href="{{asset('storage/media/service/'.$image)}}" target="_blank"><img width="100px" src="{{asset('storage/media/service/'.$image)}}"/></a>
                                                 @endif
                                             </div>
                                         </div>
@@ -55,11 +66,17 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
+                                                <label for="cc-payment" class="control-label mb-1">Package Name</label>
+                                                <input  name="package_name" value="{{$package_name}}" type="text" class="form-control" aria-required="true" aria-invalid="false" required >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
                                                 <label for="cc-payment" class="control-label mb-1">MRP </label>
                                                 <input  name="mrp" value="{{$mrp}}" type="text" class="form-control" aria-required="true" aria-invalid="false" required >
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for="cc-payment" class="control-label mb-1">Price</label>
                                                 <input  name="price" value="{{$price}}" type="text" class="form-control" aria-required="true" aria-invalid="false" required >
@@ -84,8 +101,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div>
                                         <button  type="submit" class="btn btn-lg btn-info btn-block">
                                             Submit
@@ -106,3 +121,10 @@
     </script>
 @endsection
 
+@section('script')
+    @if(Session::has('message'))
+        <script>
+            toastr.success("{!! Session::get('message') !!}");
+        </script>
+    @endif
+@endsection

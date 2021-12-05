@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
-                            <h1> <span id="js-rotating">TEMPLATE, SERVICES, SOLUTIONS</span></h1>
-                            <p class="p-heading p-large">Aria is a top consultancy company specializing in business growth using online marketing and conversion optimization tactics</p>
+                            <h1> <span id="js-rotating">WELCOME, TO, MoBook</span></h1>
+                            <p class="p-heading p-large">Oneline Event Management Platform</p>
                             <a class="btn-solid-lg page-scroll" href="#intro">DISCOVER</a>
                         </div>
                     </div> <!-- end of col -->
@@ -81,7 +81,7 @@
                                         <!-- Card -->
                                         <div class="card">
                                             <div class="card-image">
-                                                <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/catering/'.$data->image)}}" alt="alternative">
+                                                <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/service/'.$data->image)}}" alt="alternative">
                                             </div>
                                             <div class="card-body">
                                                 <h3 class="card-title">{{ $data->package_name }}</h3>
@@ -95,7 +95,7 @@
                                                 </ul>
                                             </div>
                                             <div class="button-container">
-                                                <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                <a href="{{url('/service_details')}}/{{$data->id}}" class="btn-solid-reg page-scroll" href="#">BOOK NOW</a>
                                             </div> <!-- end of button-container -->
                                         </div>
                                         <!-- end of card -->
@@ -117,7 +117,7 @@
                                         <!-- Card -->
                                             <div class="card">
                                                 <div class="card-image">
-                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/photography/'.$data->image)}}" alt="alternative">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/service/'.$data->image)}}" alt="alternative">
                                                 </div>
                                                 <div class="card-body">
                                                     <h3 class="card-title">{{ $data->package_name }}</h3>
@@ -131,7 +131,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="button-container">
-                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                    <a href="{{url('/service_details')}}/{{$data->id}}" class="btn-solid-reg page-scroll" href="#">BOOK NOW</a>
                                                 </div> <!-- end of button-container -->
                                             </div>
                                             <!-- end of card -->
@@ -154,7 +154,7 @@
                                         <!-- Card -->
                                             <div class="card">
                                                 <div class="card-image">
-                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/decoration/'.$data->image)}}" alt="alternative">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/service/'.$data->image)}}" alt="alternative">
                                                 </div>
                                                 <div class="card-body">
                                                     <h3 class="card-title">{{ $data->package_name }}</h3>
@@ -168,7 +168,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="button-container">
-                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                    <a href="{{url('/service_details')}}/{{$data->id}}" class="btn-solid-reg page-scroll" href="#">BOOK NOW</a>
                                                 </div> <!-- end of button-container -->
                                             </div>
                                             <!-- end of card -->
@@ -191,7 +191,7 @@
                                         <!-- Card -->
                                             <div class="card">
                                                 <div class="card-image">
-                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/lighting/'.$data->image)}}" alt="alternative">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/service/'.$data->image)}}" alt="alternative">
                                                 </div>
                                                 <div class="card-body">
                                                     <h3 class="card-title">{{ $data->package_name }}</h3>
@@ -205,7 +205,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="button-container">
-                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                    <a href="{{url('/service_details')}}/{{$data->id}}" class="btn-solid-reg page-scroll" href="#">BOOK NOW</a>
                                                 </div> <!-- end of button-container -->
                                             </div>
                                             <!-- end of card -->
@@ -228,7 +228,7 @@
                                         <!-- Card -->
                                             <div class="card">
                                                 <div class="card-image">
-                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/sound_system/'.$data->image)}}" alt="alternative">
+                                                    <img style="height:195px; width: 395px; " class="img-fluid" src="{{asset('storage/media/service/'.$data->image)}}" alt="alternative">
                                                 </div>
                                                 <div class="card-body">
                                                     <h3 class="card-title">{{ $data->package_name }}</h3>
@@ -242,7 +242,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="button-container">
-                                                    <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+                                                    <a href="{{url('/service_details')}}/{{$data->id}}" class="btn-solid-reg page-scroll" href="#">BOOK NOW</a>
                                                 </div> <!-- end of button-container -->
                                             </div>
                                             <!-- end of card -->

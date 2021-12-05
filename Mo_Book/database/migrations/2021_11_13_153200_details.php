@@ -14,11 +14,11 @@ class Details extends Migration
     public function up()
     {
         Schema::create('details', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements("details_id");
             $table->string("company_name");
             $table->string("phone");
             $table->longText("address");
-            $table->longtext("short_des");
+            $table->longtext("des");
             $table->string("company_image");
             $table->integer("provider_id");
             $table->integer("status");
